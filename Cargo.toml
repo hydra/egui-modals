@@ -1,0 +1,18 @@
+[package]
+name = "egui-modals"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+egui = { version = "0.31.1" }
+eframe = { version = "0.31.1", default-features = false, features = [
+    "accesskit",     # Make egui compatible with screen readers. NOTE: adds a lot of dependencies.
+    "default_fonts",
+    "glow",
+    "persistence",   # Enable restoring app state when restarting the app.
+    "wayland",
+] }
+serde = { version = "1.0", features = ["derive"]}
+names = "0.14.0"
+egui_extras = "0.31.1"
+fastrand = "2.3.0"
